@@ -94,8 +94,8 @@ modules:
   - name: wemeet
     buildsystem: simple
     build-commands:
-      - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo
-      - install -Dm644 wemeet.svg -t /app/share/icons/hicolor/scalable/apps
+      # - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo
+      - install -Dm644 wemeet.png -t /app/share/icons/hicolor/128x128/apps
       - install -Dm644 wemeet.desktop -t /app/share/applications
       - install -D wemeetapp.sh /app/bin/wemeetapp
       - install -D apply_extra -t /app/bin
@@ -113,11 +113,11 @@ modules:
         commands:
           - exec /app/extra/opt/wemeet/wemeetapp.sh "$@"
 
-      - type: file
-        path: com.tencent.wemeet.metainfo.xml
+      # - type: file
+      #   path: com.tencent.wemeet.metainfo.xml
 
       - type: file
-        path: wemeet.svg
+        path: wemeet.png
 
       - type: file
         path: wemeet.desktop
