@@ -16,3 +16,8 @@ And to re-enable:
 flatpak override --user --env=LD_PRELOAD=/app/lib/wemeet/libhook.so com.tencent.wemeet
 ```
 
+Nix Install
+```sh
+nix-shell -p flatpak-builder appstream
+flatpak-builder build-dir com.tencent.wemeet.yml --install --user --force-clean
+```
